@@ -49,7 +49,7 @@ $$\sum_{x=0}^{2^N-1}a_x\left| x \right>$$
 我们假设有一个量子黑箱$f(x)$,我们想要在一段时间内同时进行两个计算,假设有这样一个变换矩阵
 $$U_f:\left|x\right>\left|y\right> \rightarrow \left|x\right>\left|y \oplus f(x)\right>$$
 我们可以选择一个输入为$\left|0\right>$和$\left|1\right>$的叠加.如果初态为$\frac{1}{\sqrt{2}}(\left|0\right>-\left|1\right>)$,那么
-$$ U_f : \frac{1}{\sqrt{2}}(\left|0\right>+\left|1\right>)\frac{1}{\sqrt{2}}(\left|0\right>-\left|1\right>) \rightarrow$$
+$$U_f : \frac{1}{\sqrt{2}}(\left|0\right>+\left|1\right>)\frac{1}{\sqrt{2}}(\left|0\right>-\left|1\right>) \rightarrow$$
 $$\frac{1}{\sqrt{2}}\left[ (-1)^{f(0)}\left|0\right> + (-1)^{f(1)}\left|1\right>\right]\frac{1}{\sqrt{2}}(\left|0\right>-\left|1\right>)$$
 最终,我们可以把第一个量子比特在如下基上展开
 $$\left|\pm\right> = \frac{1}{\sqrt{2}}(\left|0\right>\pm\left|1\right>)$$
