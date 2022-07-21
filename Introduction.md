@@ -44,6 +44,40 @@ $$\sum_{x=0}^{2^N-1}a_x\left| x \right>$$
 
 经典计算机难以模拟得到量子计算机运行的结果.
 
-## 量子排比(?)
+## 1.5 量子并行计算(?)Quantum parallelism
 
-yyt
+我们假设有一个量子黑箱$f(x)$,我们想要在一段时间内同时进行两个计算,假设有这样一个变换矩阵
+$$U_f:\left|x\right>\left|y\right> \rightarrow \left|x\right>\left|y \oplus f(x)\right>$$
+我们可以选择一个输入为$\left|0\right>$和$\left|1\right>$的叠加.如果初态为$\frac{1}{\sqrt{2}}(\left|0\right>-\left|1\right>)$,那么
+$$ U_f : \frac{1}{\sqrt{2}}(\left|0\right>+\left|1\right>)\frac{1}{\sqrt{2}}(\left|0\right>-\left|1\right>) \rightarrow 
+$$
+$$\frac{1}{\sqrt{2}}\left[ (-1)^{f(0)}\left|0\right> + (-1)^{f(1)}\left|1\right>\right]\frac{1}{\sqrt{2}}(\left|0\right>-\left|1\right>)
+$$
+最终,我们可以把第一个量子比特在如下基上展开
+$$\left|\pm\right> = \frac{1}{\sqrt{2}}(\left|0\right>\pm\left|1\right>)$$
+假设我们有一个作用在$N$个比特上的方程,它有可能有$2^N$种可能的参数.在传统计算机上我们需要计算$2^N$次,但是在量子计算机中,我们可以选择这样一个输入函数
+$$\left[\frac{1}{\sqrt{2}}(\left|0\right>-\left|1\right>)\right]^N = \frac{1}{2^{N/2}}\sum_{x=0}^{2^N-1}\left|x\right>,$$
+我们可以得到一个态
+$$\frac{1}{2^{N/2}}\sum_{x=0}^{2^N-1}\left|x\right>\left|f(x)\right>,$$
+
+## 1.6 对复杂度的新分类
+
+时间复杂度、空间复杂度.传统的复杂度计算方法对量子计算机似乎并不适用.
+
+## 1.7 计算错误
+
+量子计算机的错误纠正.量子比特不可避免会与外界环境发生相互作用,将一个较大的量子系统与外界隔离是很难做到的.量子系统与外界的相互作用会导致量子系统的状态坍缩到一个值,也被称为退相干(decoherence).
+
+退相干并不是唯一的问题,假设我们能完美地将量子系统与外界环境隔离,但我们仍然不能认为量子计算机能完美完成运算.在运算时微小错误的累积会导致计算的错误.
+
+为了提升量子门的表现,我们在每次门后冷却量子比特.但是我们不能对量子计算机做这种冷却,与环境的相互作用会导致导致计算机的退相干.
+
+一个较为复杂的方法是使用纠错码.量子纠错码的困难:
+- 态错误,错误的种类更多: $\left|0\right> \rightarrow \left|1\right>, \left|0\right> \rightarrow -\left|0\right>$.
+- 错误更小.$a\left|0\right>+b\left|1\right>$中的$a$与$b$可能会被改变,传统的纠错码被设计为寻找比特错误这样的明显错误.
+- 测量会导致扰动.
+- 量子系统无法精确复制.
+
+## 1.8 量子纠错码
+
+Peter Shor首次提出了第一种量子纠错码的样例.
