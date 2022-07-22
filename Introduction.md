@@ -91,4 +91,23 @@ Peter Shor首次提出了第一种量子纠错码的样例.
 
 ### 1.9.1 离子阱
 
-一种可能的达到以上目标的方式由Ignacio Cirac和Peter Zoller提出并由Dave Wineland的研究组加以发展.
+一种可能的达到以上目标的方式由Ignacio Cirac和Peter Zoller提出并由Dave Wineland的研究组加以发展.在这个方法中，每个量子比特由一个离子携带.每个离子的量子态是粒子基态$\left|g\right>$(视为$\left|0\right>$)和一个特殊的长寿命的激发态$\left|e\right>$(视为$\left|1\right>$),这两个能级的相干叠加
+$$a\left|g\right>+be^{i\omega t}\left|e\right>$$
+在$\{\left|g\right>,\left|e\right>\}$的基底上测量离子的状态是很简单的.一束短激光可以把离子从状态$\left|g\right>$转变到一个短时的激发态$\left|e^{'}\right>$,当激光照明离子时,在状态$\left|0\right>$的离子持续吸收释放光子,而在状态$\left|1\right>$的离子保持不变.
+
+由于离子之间的库伦斥力，这些离子之间是分开的，可以使用激光脉冲来分别定位.如果精确控制激光脉冲的强度和相位,就可以控制量子态.
+
+### 1.9.2 Cavity QED
+
+Jeff Kimble’s的实验组利用光腔控制了一些中性原子.
+
+另外一种可能是在质子的极化中存储量子比特.
+
+### 1.9.3 NMR
+
+nuclear magnetic resonance technology.量子比特由核自旋携带.量子比特可以存在较长的时间.
+
+## 1.10 总结
+- 量子计算机可以解决复杂的问题
+- 量子计算的错可以被纠正
+- 量子计算的硬件可以实现
