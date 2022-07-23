@@ -120,14 +120,23 @@ nuclear magnetic resonance technology.量子比特由核自旋携带.量子比�
 
  为了理解一个开放系统$S$的行为,我们把$S$和他所处的外界环境$E$结合在一起视为一个系统.
 
- ### 公理一:态
+ ### 公理一: 态
 
 态是一个物理系统状态的完整描述.在量子力学中,一个态是希尔伯特空间中的一个矢量.
 
 **希尔伯特空间**:
 - 一个在复数域上的矢量空间,向量被写作$\left|\psi\right>$(狄拉克符号)
 - 有一个*内积*$\left<\varphi|\psi\right>$将按顺序的一对矢量映射到$\mathbb{C}$中,它有如下性质:
--   1. 模为正:$\left<\psi|\psi\right> >0$
--   2. 线性性:$\left<\varphi |(a|\psi_1\right> + b|\psi_2) = a\left<\varphi|\psi_1\right>+b\left<\varphi|\psi_2\right>$.
--   3. 斜对称性: $\left<\varphi|\psi\right> = \left<\psi|\varphi\right>^{*}$.
+   1. 模为正:$\left<\psi|\psi\right> >0$
+    2. 线性性:$\left<\varphi |(a|\psi_1\right> + b|\psi_2) = a\left<\varphi|\psi_1\right>+b\left<\varphi|\psi_2\right>$.
+   3. 斜对称性: $\left<\varphi|\psi\right> = \left<\psi|\varphi\right>^{*}$.
 - 在范数为$||\psi|| = \left<\varphi|\psi\right> = \left<\psi|\varphi\right>^{\frac{1}{2}}$是*complete*的.(不太会翻译这个词)
+
+### 公理二: 可观测量
+
+可观测量是一个可以被观测的物理量.在量子物理中,一个可观测量是一个自伴算子.
+在希尔伯特空间$\mathcal{H}$中的自伴算子有谱表示方法,它的本征矢量在希尔伯特空间中形成一组正交的基.我们可以把算符$\bf{A}$表示为
+$$\bf{A} = \sum_{n} a_n\bf{E}_n.$$
+其中$a_n$为$\bf{A}$的一个本征值,$\bf{E}_n$是在相互正交的本征向量组成的空间中对应本征值的矢量.它们满足
+$$\bf{E}_n\bf{E}_m = \delta_{n,m}\bf{E}_n.$$
+$$\bf{E}_n^{\dagger} = \bf{E}_n$$
