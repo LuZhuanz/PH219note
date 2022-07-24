@@ -140,3 +140,10 @@ $$\bf{A} = \sum_{n} a_n\bf{E}_n.$$
 其中$a_n$为$\bf{A}$的一个本征值,$\bf{E}_n$是在相互正交的本征向量组成的空间中对应本征值的矢量.它们满足
 $$\bf{E}_n\bf{E}_m = \delta_{n,m}\bf{E}_n.$$
 $$\bf{E}_n^{\dagger} = \bf{E}_n$$
+由$\left| \psi \right>$在一维空间展开的正交算符可以被写作$\left| \psi \right>\left< \psi \right|$,算符$\bf{A}$的谱表示为
+$$ \bf{A} = \sum_{n} \left| \psi \right>a_n\left< \psi \right|, $$
+其中 $\{\left| n \right>\}$是$\bf{A}$的一组正交基,有$\bf{A}\left|n\right> = a_n\left|n\right>$.
+
+### 公理三: 测量
+
+测量是物理系统的状态被某个探测器获得的过程.在量子物理中,对一个可观测的量$\bf{A$的测量会获得$\bf{A$的一个本征状态,测量得到这个态对应的本征值.假设这个态是$\left| \psi \right>$
